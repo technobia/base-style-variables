@@ -1,0 +1,24 @@
+.flex-box (@t, @l, @b, @r) {
+  position: absolute;
+  top: @t;
+  left: @l;
+  bottom: @b;
+  right: @r;
+}
+
+.loop(@string, @i: 1, @distance: 0) when (@i <= 7) {
+  .@{string}-@{distance} {
+    @{string}: ~"@{distance}px !important";
+  }
+  .loop(@string, (@i + 1), (@distance + 5));
+}
+
+.loop(padding-top);
+.loop(padding-left);
+.loop(padding-bottom);
+.loop(padding-right);
+
+.loop(margin-top);
+.loop(margin-left);
+.loop(margin-bottom);
+.loop(margin-right);
