@@ -1,2 +1,2 @@
-# style-variables
-Some style loops function for re-use
+# Style variables
+Style loops function for re-use
