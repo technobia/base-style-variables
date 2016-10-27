@@ -31,6 +31,20 @@
     @{property}: @value;
 }
 
+.flex-box(@top, @left, @bottom, @right) {
+  position: absolute;
+  top: @top;
+  left: @left;
+  bottom: @bottom;
+  right: @right;
+}
+
+.css3-calc(@property, @operation) {
+  @{property}: -moz-calc(@operation);
+  @{property}: -webkit-calc(@operation);
+  @{property}: calc(@operation);
+}
+
 .no-padding {
   padding: 0 !important;
 }
@@ -106,14 +120,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.flex-box(@top, @left, @bottom, @right) {
-  position: absolute;
-  top: @top;
-  left: @left;
-  bottom: @bottom;
-  right: @right;
 }
 
 .pointer {

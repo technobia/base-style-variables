@@ -38,6 +38,12 @@ $numbers: 0 5 10 15;
   right: $right;
 }
 
+@mixin css3-calc($property, $operation) {
+  #{$property}: -moz-calc(#{$operation});
+  #{$property}: -webkit-calc(#{$operation});
+  #{$property}: calc(#{$operation});
+}
+
 .no-padding {
   padding: 0 !important;
 }
